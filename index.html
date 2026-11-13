@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DiamondZone – Free Fire Diamond Top-Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffafb;--card:#fff;--ink:#1a1020;--mute:#6d6577;--line:#f0dfe4;--ac:#ff1f5a;--ac2:#ff6b35;--soft:#ffe9ef;--ok:#0a9d6b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3,.brand b,.big{font-family:Rajdhani,"Arial Narrow",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center}
+.logo svg{width:24px;height:24px}
+.brand b{font-size:26px;color:var(--ac)}
+.brand small{color:var(--mute);font-weight:700;font-size:11px;letter-spacing:.08em}
+nav{display:flex;align-items:center;gap:22px}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 16px "Plus Jakarta Sans",sans-serif;color:#fff;background:linear-gradient(90deg,var(--ac),var(--ac2));padding:13px 20px;border-radius:12px;text-decoration:none;text-align:center;box-shadow:0 8px 20px -8px var(--ac)}
+.btn.tg{background:#229ed9;box-shadow:none}.btn.wa{background:#1fa855;box-shadow:none}.btn.ghost{background:var(--soft);color:var(--ac);box-shadow:none}
+.btn.sm{padding:9px 14px;font-size:14px}.btn:disabled{opacity:.5;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.pack,.panel,.trust div,.steps li,details{box-shadow:0 8px 22px -14px rgba(26,16,32,.28)}
+.banner{position:relative;margin-top:22px;border-radius:24px;overflow:hidden;height:clamp(200px,34vw,340px);background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px -18px rgba(26,16,32,.35)}
+.slides{display:flex;height:100%;transition:transform .6s ease}
+.slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,60px);color:var(--ink);gap:16px}
+.slide h1{font-size:clamp(30px,6.4vw,64px);line-height:1;margin:0 0 10px}
+.slide p{margin:0 0 16px;max-width:420px;opacity:.9;font-size:clamp(14px,2vw,18px)}
+.slide svg{width:clamp(90px,22vw,230px);height:auto;flex:none;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.s1{background:linear-gradient(120deg,#fff,#ffe3ec)}.s2{background:linear-gradient(120deg,#fff,#efe8ff)}.s3{background:linear-gradient(120deg,#fff,#e2f6ee)}.slide h1{color:var(--ac)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(0,0,0,.35);color:#fff;font-size:20px;cursor:pointer}
+.arrow.l{left:12px}.arrow.r{right:12px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(26,16,32,.2);cursor:pointer}.dots i.on{background:var(--ac);width:24px;border-radius:9px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;gap:10px;align-items:center;font-size:14px}
+.trust b{display:block;font-size:15px}.trust span.i{font-size:22px}
+.trust small{color:var(--mute)}
+section{padding:34px 0}
+.stephead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;display:grid;place-items:center;font:700 18px Rajdhani,sans-serif;flex:none}
+h2{font-size:clamp(26px,4vw,36px);margin:0}
+.sub{color:var(--mute);margin:0 0 18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:220px 1fr auto;gap:14px;align-items:end}
+label{display:block;font-size:13px;font-weight:700;color:var(--mute);margin-bottom:6px}
+select,input[type=text]{width:100%;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 14px;font:500 16px "Plus Jakarta Sans",sans-serif;background:var(--bg);color:var(--ink)}
+#uidMsg{grid-column:1/-1;margin:0;font-size:14px;color:var(--mute);min-height:20px}.err{color:var(--ac)!important}.ok{color:var(--ok)!important}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.pack{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:4px;position:relative}
+.pack .tag{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:#fff;padding:3px 11px;border-radius:99px}
+.pack svg{width:92px;height:72px;margin:6px 0 4px}
+.big{font-size:34px;font-weight:700;color:var(--ac);line-height:1}
+.pack .d{font-weight:700}.price{font-size:26px;font-weight:700;margin-top:4px}
+.pack small{color:var(--mute)}.pack .btn{margin-top:12px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;padding:0;margin:0;list-style:none;counter-reset:s}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;counter-increment:s;position:relative;overflow:hidden}
+.steps li::after{content:"0" counter(s);position:absolute;right:16px;top:8px;font:700 40px Rajdhani,sans-serif;color:var(--line)}
+.steps b{display:block;margin:6px 0 4px;font-size:17px}.steps span{color:var(--mute);font-size:15px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}details p{margin:10px 0 0;color:var(--mute)}
+footer{border-top:1px solid var(--line);background:var(--card);padding:30px 0 40px;color:var(--mute);font-size:14px}
+.cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;margin-bottom:18px}
+footer h4{margin:0 0 8px;color:var(--ink);font-size:14px}footer a{display:block;color:var(--mute);text-decoration:none;margin:4px 0}
+.disc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px}
+.modal{position:fixed;inset:0;background:rgba(10,5,15,.65);display:none;align-items:center;justify-content:center;padding:20px;z-index:20;overflow:auto}
+.modal.on{display:flex}
+.box{background:var(--card);border-radius:22px;max-width:430px;width:100%;padding:22px;border:1px solid var(--line)}
+.box h3{margin:0 0 4px;font-size:26px}.box>p{margin:0 0 12px;color:var(--mute);font-size:14px}
+.sum{background:var(--soft);border-radius:14px;padding:12px 14px;margin-bottom:14px}
+.sum div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.qr{border:2px dashed var(--line);border-radius:16px;padding:16px;text-align:center;margin-bottom:12px}
+.qr img{width:190px;height:190px;object-fit:contain;border-radius:10px;background:#fff}
+.up{display:block;border:2px dashed var(--ac);border-radius:14px;padding:18px;text-align:center;cursor:pointer;color:var(--ac);font-weight:700}
+.up input{display:none}.prev{max-width:100%;max-height:160px;border-radius:10px;margin-top:10px}
+.box .btn{display:block;width:100%;margin-top:10px}
+.x{background:none;border:0;color:var(--mute);cursor:pointer;width:100%;margin-top:8px;font:500 14px inherit}
+.pane{display:none}.pane.on{display:block}
+.oid{font:700 22px Rajdhani,sans-serif;color:var(--ac);letter-spacing:.04em}
+@media(max-width:800px){nav a.hide{display:none}.trust{grid-template-columns:1fr 1fr}.panel{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.slide svg{width:84px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slides{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fd4ff"/><stop offset="1" stop-color="#1a5bff"/></linearGradient>
+<symbol id="gem" viewBox="0 0 100 80"><polygon points="20,4 80,4 98,28 50,76 2,28" fill="url(#g1)"/><polygon points="20,4 35,28 2,28" fill="#bfe9ff" opacity=".7"/><polygon points="80,4 65,28 98,28" fill="#0a3fd0" opacity=".5"/><polygon points="35,28 65,28 50,76" fill="#2f7bff" opacity=".8"/><polygon points="20,4 50,4 35,28" fill="#e6f6ff" opacity=".8"/></symbol>
+</defs></svg>
+
+<header><div class="wrap">
+  <a class="brand" href="#top"><span class="logo"><svg viewBox="0 0 100 80"><use href="#gem"/></svg></span><span><b id="n1">DiamondZone</b><br><small>FREE FIRE TOP-UP</small></span></a>
+  <nav><a class="hide" href="#packs">Packs</a><a class="hide" href="#how">How it works</a><a class="hide" href="#faq">FAQ</a><a class="btn tg sm" id="tgTop" href="#" target="_blank" rel="noopener">Contact us</a></nav>
+</div></header>
+
+<main id="top"><div class="wrap">
+  <div class="banner" aria-roledescription="carousel">
+    <div class="slides" id="slides">
+      <div class="slide s1"><div><h1>Free Fire diamonds in minutes</h1><p>Top up with just your Player ID. No password, no login.</p><a class="btn ghost" href="#uidBox">Start top-up</a></div><svg viewBox="0 0 100 80"><use href="#gem"/></svg></div>
+      <div class="slide s2"><div><h1>Weekly &amp; Monthly passes</h1><p>Membership passes at a clear fixed price, ready to order.</p><a class="btn ghost" href="#packs">See passes</a></div><svg viewBox="0 0 100 80"><use href="#gem"/></svg></div>
+      <div class="slide s3"><div><h1>Real support, 7 days a week</h1><p>Message us on WhatsApp or Telegram with any order question.</p><a class="btn ghost" href="#faq">Read FAQ</a></div><svg viewBox="0 0 100 80"><use href="#gem"/></svg></div>
+    </div>
+    <button class="arrow l" id="prev" aria-label="Previous slide">‹</button><button class="arrow r" id="next" aria-label="Next slide">›</button>
+    <div class="dots" id="dots"></div>
+  </div>
+  <div class="trust">
+    <div><span class="i">🔒</span><span><b>UID only</b><small>No login needed</small></span></div>
+    <div><span class="i">⚡</span><span><b>Fast delivery</b><small>After payment check</small></span></div>
+    <div><span class="i">💳</span><span><b>UPI payment</b><small>GPay, PhonePe, Paytm</small></span></div>
+    <div><span class="i">🎧</span><span><b>Support</b><small>WhatsApp &amp; Telegram</small></span></div>
+  </div>
+</div>
+
+<section id="uidBox"><div class="wrap">
+  <div class="stephead"><span class="num">1</span><h2>Enter your Free Fire UID</h2></div>
+  <p class="sub">Your UID is the numeric Player ID on your profile. We serve the India server only, so double-check your UID before ordering.</p>
+  <div class="panel">
+    <div><label for="region">Server region</label><input id="region" type="text" value="India (IND)" readonly></div>
+    <div><label for="uid">Free Fire UID</label><input id="uid" type="text" inputmode="numeric" autocomplete="off" placeholder="Enter your 8–12 digit UID" maxlength="12"></div>
+    <button class="btn" id="saveUid" type="button">Save UID</button>
+    <p id="uidMsg" role="status"></p>
+  </div>
+</div></section>
+
+<section id="packs"><div class="wrap">
+  <div class="stephead"><span class="num">2</span><h2>Choose your pack</h2></div>
+  <p class="sub">Prices in Indian rupees. Pick a pack and we’ll guide you to pay.</p>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How ordering works</h2><p class="sub">Four simple steps from UID to diamonds.</p>
+  <ol class="steps">
+    <li><b>Enter your UID</b><span>Find it on your Free Fire profile. We never ask for your password.</span></li>
+    <li><b>Pick a pack</b><span>Choose diamonds or a membership pass.</span></li>
+    <li><b>Pay by UPI</b><span>Scan the QR or open your UPI app, then upload your payment screenshot.</span></li>
+    <li><b>Get your diamonds</b><span>We check your payment, top up your UID and message you when it’s done.</span></li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2><p class="sub">Quick answers before you order.</p>
+  <details><summary>Do you need my password?</summary><p>No. We only need your numeric UID. Never share your password or OTP with anyone.</p></details>
+  <details><summary>How long does delivery take?</summary><p>We deliver after we confirm your payment. Timing depends on how busy we are, and we’ll message you when your order is done.</p></details>
+  <details><summary>I entered the wrong UID. What now?</summary><p>Message us before paying. Once diamonds are sent to a UID, we can’t move them to another account.</p></details>
+  <details><summary>Can I get a refund?</summary><p>If we can’t complete your order, you get your money back. Contact us with your order ID.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b id="n2" style="color:var(--ink);font-size:18px">DiamondZone</b><p>Independent Free Fire diamond top-up service. Orders are confirmed manually by our team.</p></div>
+    <div><h4>Shop</h4><a href="#packs">Diamond packs</a><a href="#packs">Membership passes</a><a href="#how">How it works</a></div>
+    <div><h4>Help</h4><a href="#faq">FAQ</a><a id="tgF" href="#" target="_blank" rel="noopener">Telegram</a><a id="waF" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <div class="disc">Disclaimer: <span id="n3">DiamondZone</span> is an independent top-up service and is not affiliated with or endorsed by Garena. Free Fire and Free Fire MAX are trademarks of Garena International Ltd.</div>
+</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box">
+  <div class="pane on" id="p1">
+    <h3 id="mt">Pay by UPI</h3><p>Pay the exact amount, then upload your screenshot.</p>
+    <div class="sum"><div><span>UID</span><b id="mUid"></b></div><div><span>Pack</span><b id="mPack"></b></div><div><span>Amount</span><b id="mPrice"></b></div></div>
+    <div class="qr" id="qr"></div>
+    <a class="btn ghost" id="upiLink" href="#">Open in GPay / PhonePe / Paytm</a>
+    <button class="btn" id="toP2" type="button">I have paid, upload screenshot</button>
+  </div>
+  <div class="pane" id="p2">
+    <h3>Upload payment screenshot</h3><p>This helps us match your payment quickly.</p>
+    <label class="up" for="shot">Tap to choose screenshot<input id="shot" type="file" accept="image/*"></label>
+    <img class="prev" id="prev2" alt="" hidden>
+    <button class="btn" id="submit" type="button" disabled>Submit order</button>
+    <button class="x" id="back" type="button">Back to payment</button>
+  </div>
+  <div class="pane" id="p3">
+    <h3>Order submitted</h3><p>Your order is waiting for our payment check. Send your order ID and screenshot to us so we can start.</p>
+    <div class="sum"><div><span>Order ID</span><span class="oid" id="oid"></span></div><div><span>Status</span><b>Waiting for payment check</b></div></div>
+    <a class="btn tg" id="sendTg" href="#" target="_blank" rel="noopener">Send details on Telegram</a>
+    <a class="btn wa" id="sendWa" href="#" target="_blank" rel="noopener">Send details on WhatsApp</a>
+  </div>
+  <button class="x" id="closeM" type="button">Close</button>
+</div></div>
+
+<script>
+// ---- Edit these ----
+var STORE_NAME="DiamondZone", WHATSAPP="919999999999", TELEGRAM="your_username";
+var UPI_ID="yourname@upi", QR_IMAGE=""; // put a link/data of your UPI QR image in QR_IMAGE
+var PACKS=[
+ {d:"100",p:80,t:"Basic",c:"#0a9d6b"},{d:"310",p:240,t:"Popular",c:"#ff6b35"},
+ {d:"520",p:400,t:"Special",c:"#e89b00"},{d:"1,060",p:800,t:"Classic",c:"#0ba5a5"},
+ {d:"2,180",p:1600,t:"Platinum",c:"#ff1f5a"},{d:"5,600",p:4000,t:"King",c:"#c58a00"},
+ {d:"Weekly Pass",p:160,t:"Pass",c:"#5b2bff",m:1},{d:"Monthly Pass",p:800,t:"Pass",c:"#5b2bff",m:1}
+];
+// --------------------
+var $=function(i){return document.getElementById(i)},pick=null,uid="",order="";
+["n1","n2","n3"].forEach(function(i){$(i).textContent=STORE_NAME});
+document.title=STORE_NAME+" – Free Fire Diamond Top-Up";
+var tg="https://t.me/"+TELEGRAM,wa="https://wa.me/"+WHATSAPP;
+$("tgTop").href=tg;$("tgF").href=tg;$("waF").href=wa;
+PACKS.forEach(function(k,i){
+ var c=document.createElement("div");c.className="pack";
+ c.innerHTML='<span class="tag" style="background:'+k.c+'">'+k.t+'</span><svg viewBox="0 0 100 80" aria-hidden="true"><use href="#gem"/></svg><div class="big">'+k.d+'</div><div class="d">'+(k.m?'Free Fire membership':'Diamonds')+'</div><div class="price">₹'+k.p.toLocaleString("en-IN")+'</div><small>Delivered after payment check</small><button class="btn" type="button" data-i="'+i+'">Buy now</button>';
+ $("grid").appendChild(c)});
+// banner
+var cur=0,N=3,tm;
+for(var j=0;j<N;j++){var d=document.createElement("i");d.dataset.j=j;$("dots").appendChild(d)}
+function go(n){cur=(n+N)%N;$("slides").style.transform="translateX(-"+cur*100+"%)";[].forEach.call($("dots").children,function(e,x){e.className=x===cur?"on":""})}
+function auto(){clearInterval(tm);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)tm=setInterval(function(){go(cur+1)},5000)}
+$("prev").onclick=function(){go(cur-1);auto()};$("next").onclick=function(){go(cur+1);auto()};
+$("dots").onclick=function(e){if(e.target.dataset.j){go(+e.target.dataset.j);auto()}};
+go(0);auto();
+// uid
+function msg(t,c){var m=$("uidMsg");m.textContent=t;m.className=c||""}
+function okUid(v){return /^\d{8,12}$/.test(v)}
+$("saveUid").onclick=function(){var v=$("uid").value.trim();if(!okUid(v)){msg("Enter a UID with 8 to 12 digits.","err");return}uid=v;msg("UID saved. Now choose a pack below.","ok");$("packs").scrollIntoView()};
+$("uid").addEventListener("keydown",function(e){if(e.key==="Enter")$("saveUid").click()});
+// modal
+function pane(n){["p1","p2","p3"].forEach(function(p){$(p).className="pane"+(p===n?" on":"")})}
+$("grid").addEventListener("click",function(e){
+ var b=e.target.closest("button[data-i]");if(!b)return;
+ if(!okUid($("uid").value.trim())){msg("Enter your UID first, then choose a pack.","err");$("uidBox").scrollIntoView();$("uid").focus();return}
+ uid=$("uid").value.trim();pick=PACKS[+b.dataset.i];
+ var nm=pick.m?pick.d:pick.d+" Diamonds";
+ $("mUid").textContent=uid;$("mPack").textContent=nm;$("mPrice").textContent="₹"+pick.p.toLocaleString("en-IN");
+ $("qr").innerHTML=(QR_IMAGE?'<img src="'+QR_IMAGE+'" alt="UPI QR code"><br>':'<p style="margin:0 0 6px;color:var(--mute)">Add your UPI QR image in QR_IMAGE</p>')+'UPI ID: <b>'+UPI_ID+'</b>';
+ $("upiLink").href="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent(STORE_NAME)+"&am="+pick.p+"&cu=INR";
+ pane("p1");$("shot").value="";$("prev2").hidden=true;$("submit").disabled=true;
+ $("modal").classList.add("on")});
+$("toP2").onclick=function(){pane("p2")};$("back").onclick=function(){pane("p1")};
+$("shot").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){$("prev2").src=r.result;$("prev2").hidden=false;$("submit").disabled=false};r.readAsDataURL(f)};
+$("submit").onclick=function(){
+ order="DZ-"+new Date().toISOString().slice(2,10).replace(/-/g,"")+"-"+Math.random().toString(36).slice(2,7).toUpperCase();
+ $("oid").textContent=order;
+ var t=encodeURIComponent("Order "+order+"\nUID: "+uid+"\nServer: "+$("region").value+"\nPack: "+$("mPack").textContent+"\nAmount: "+$("mPrice").textContent+"\nI will send my payment screenshot here.");
+ $("sendTg").href=tg+"?text="+t;$("sendWa").href=wa+"?text="+t;pane("p3")};
+function closeM(){$("modal").classList.remove("on")}
+$("closeM").onclick=closeM;$("modal").addEventListener("click",function(e){if(e.target===this)closeM()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM()});
+</script>
+</body>
+</html>
